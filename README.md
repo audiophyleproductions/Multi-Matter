@@ -78,6 +78,20 @@ The self-contained build is produced at `dist\MultiMatter.exe`. A Windows instal
 - [Changelog](CHANGELOG.md)
 - [Third-party notices](THIRD_PARTY_NOTICES.md)
 
+### Windows Installation and Security
+
+Multi-Matter is a free, independently developed Windows utility.
+
+The current GitHub installer is not digitally signed with a commercial code-signing certificate. Consequently, Windows SmartScreen may display an unfamiliar-application warning, and User Account Control may identify the publisher as unknown.
+
+Always download Multi-Matter from the [official GitHub Releases page](https://github.com/audiophyleproductions/Multi-Matter/releases/latest).
+
+A SHA-256 checksum is provided with each release to help verify the integrity of the downloaded installer. Verify the checksum against the value published in the official release before installing.
+
+Multi-Matter requires administrator privileges to format removable storage devices.
+
+**Never install a copy obtained from an unknown or unofficial source.**
+
 ## Licence
 
 **Copyright © 2026 Patrick Tiley. All rights reserved.**
