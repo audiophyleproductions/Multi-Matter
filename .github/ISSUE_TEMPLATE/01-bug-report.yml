@@ -1,0 +1,72 @@
+name: Bug report
+description: Report an application error or unexpected behaviour.
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug. **Never include confidential data, storage serial numbers, or other sensitive information.** Formatting erases data: reproduce only with disposable media.
+  - type: input
+    id: version
+    attributes:
+      label: Multi-Matter version
+      placeholder: V1.0.1
+    validations:
+      required: true
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Windows version
+      options:
+        - Windows 11
+        - Windows 10
+        - Other / unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: media
+    attributes:
+      label: Storage device type
+      options:
+        - USB flash drive
+        - SD card
+        - microSD card
+        - Other removable storage
+        - Not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Include the exact error text if available, with personal information removed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: '1. Launch Multi-Matter\n2. Insert removable drive\n3. ...'
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Diagnostic details (optional)
+      description: Bus type, removable drive type, filesystem, size, redacted logs. Never paste serial numbers or private paths.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for duplicates.
+          required: true
+        - label: I removed private information from anything I posted.
+          required: true

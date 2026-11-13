@@ -1,0 +1,61 @@
+name: Device compatibility report
+description: Report removable storage that is missing or misidentified.
+title: '[Compatibility]: '
+labels: ['compatibility']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not format any drive just to gather diagnostic information.** Remove or obscure any physical disk IDs or serial numbers before posting.
+  - type: input
+    id: version
+    attributes:
+      label: Multi-Matter version
+      placeholder: V1.0.1
+    validations:
+      required: true
+  - type: dropdown
+    id: media
+    attributes:
+      label: Media type
+      options:
+        - USB flash drive
+        - SD card
+        - microSD card
+        - Other removable media
+    validations:
+      required: true
+  - type: dropdown
+    id: reader
+    attributes:
+      label: Connection
+      options:
+        - Built-in laptop card reader
+        - External USB card reader
+        - USB flash drive directly connected
+        - USB hub
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and device/reader model
+      placeholder: Windows 11 / Realtek PCIe Reader (optional model)
+    validations:
+      required: true
+  - type: textarea
+    id: windows-details
+    attributes:
+      label: How Windows reports the device
+      description: Report DriveType, BusType, filesystem and approximate capacity if known; do not include serial numbers.
+      placeholder: 'DriveType: Removable; BusType: SCSI; FS: exFAT; Capacity: 64 GB'
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What does Multi-Matter show?
+      description: Include a redacted diagnostic-log excerpt if useful.
+    validations:
+      required: true
