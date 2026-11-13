@@ -1,102 +1,87 @@
+<div align="center">
+
 # Multi-Matter
+### Removable Drive Batch Formatter
 
-**Multi-Matter - Removable Drive Batch Formatter V1.0.1** — Windows removable-media batch formatter — a native C# / WPF desktop application with a charcoal-and-orange interface.
+**Because formatting 40 USB drives one at a time is nobody's idea of a good time.**
 
-> \*\*Version 1.0.1 source package.\*\* Previous builds were tested on Windows; this specific revision has not been compiled or tested here. Verify the local build and removable-drive safeguards before public distribution.
+[**Download Multi-Matter V1.0.1**](https://github.com/audiophyleproductions/Multi-Matter/releases/tag/v1.0.1) · [Report a bug](https://github.com/audiophyleproductions/Multi-Matter/issues) · [Licence](LICENSE)
+
+</div>
+
+---
+
+## Meet Multi-Matter
+
+A pile of USB sticks? A handful of SD cards? Multi-Matter makes repetitive removable-media formatting a much less repetitive job. Choose your drives, choose the file system, give them a common label, and format in a batch—using one straightforward Windows interface.
+
+No command-line gymnastics, subscriptions or accounts. Just a purpose-built tool that does the job.
+
+## Download and install
+
+1. Open the [V1.0.1 release page](https://github.com/audiophyleproductions/Multi-Matter/releases/tag/v1.0.1).
+2. Under **Assets**, download `Multi-Matter_Setup_1.0.1.exe` (if listed).
+3. Run the installer and follow the setup wizard.
+4. Start **Multi-Matter** from the Start Menu and approve the Windows administrator prompt when required.
+
+> **Important:** Formatting erases existing files on selected volumes. Always check drive letters and capacities and back up anything important first. Test unfamiliar devices with expendable media. The installer is currently unsigned and Windows SmartScreen may warn about an unrecognised application.
 
 ## Features
 
-* Discover eligible USB-connected volumes and native removable SD/MMC cards and show drive letters, labels and sizes.
-* Select individual drives or use the **Select All / Deselect All** toggle.
-* Format selected volumes to **exFAT, FAT32 or NTFS** with a shared volume label.
-* Quick-format existing volumes; no partition creation or copying files.
-* Revalidate selected device identity, exclude system/boot and protected volumes, and require final confirmation before erasure.
-* Progress, per-drive outcome, refresh and diagnostic logging.
-* Optional completion sound; preference persists. Uses an embedded locally supplied WAV when present, or a Windows notification fallback. Includes a Test Sound button.
-* Runs as a native Windows GUI executable; requires administrator approval for disk formatting, but does not launch a PowerShell or Command Prompt window.
-
-## System requirements
-
-Windows 10/11 x64. Build requires the .NET 8 SDK or newer compatible SDK. Prebuilt **self-contained** builds do not require installing the .NET runtime.
-
-## Build on Windows
-
-In the folder containing `USBFormatter.csproj`:
-
-```powershell
-dotnet restore USBFormatter.csproj
-dotnet publish USBFormatter.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -o dist
-```
-
-Run `dist\\MultiMatter.exe`. Windows UAC approval is expected. `app.manifest` requests elevation. **Never accept a UAC request from an executable you did not obtain from a source you trust.**
-
-To create a GitHub Actions build artifact, use **Actions → Build Windows executable → Run workflow**. The workflow builds, sanity-checks the output and uploads it; it does **not** automatically publish an untested release.
+- **Batch formatting:** Select multiple removable volumes in one go.
+- **USB, SD and microSD:** Detects eligible volumes that Windows classifies as removable, including cards connected through compatible internal readers.
+- **Select All / Deselect All:** A single toggle for selecting or clearing the drive list.
+- **exFAT, FAT32 and NTFS:** Choose the file system supported by Windows for the selected volume.
+- **Shared volume label:** Apply one optional name across selected drives.
+- **Drive safeguards:** Rechecks identities, excludes protected boot/system volumes and asks for confirmation before formatting.
+- **Progress and results:** Per-drive status, refresh and diagnostics.
+- **Optional completion sound:** Enable or disable it, save the preference and use **Test Sound** without formatting anything.
+- **Simple desktop UI:** Charcoal-and-orange native C# WPF application.
 
 ## How to use
 
-1. Connect your USB drives or insert an SD/microSD card and launch Multi-Matter as administrator.
-2. Confirm the drive **letters and capacities** before selecting anything.
-3. Tick individual drives or press **Select All** (the button then changes to **Deselect All**).
-4. Select file system and optional common label.
-5. Click **FORMAT SELECTED**, read the erase confirmation, and choose Yes only if every drive is correct.
-6. Check the per-drive results. Refresh to see updated labels.
+1. Insert your removable USB drives or SD/microSD cards.
+2. Launch Multi-Matter and check each displayed letter, label and capacity.
+3. Select individual volumes or click **Select All** (which changes to **Deselect All** when everything is selected).
+4. Choose exFAT, FAT32 or NTFS, and optionally set a common volume label.
+5. Click **Format Selected**, review the erase confirmation, and proceed only if the selections are correct.
+6. Review the results when the batch finishes.
 
-**Warning:** Formatting permanently destroys existing files on selected volumes. External USB HDDs and SSDs may also qualify. This application only formats volumes, not entire physical disks. Backup anything important and test with spare drives first.
+## Compatibility and limitations
+
+- Windows 10/11, x64; administrator approval required for formatting.
+- Formats existing volumes, not partition layouts or whole physical disks.
+- Eligibility is based on Windows removable-drive classification plus protection checks; some hardware may be classified differently and not appear.
+- Windows' FAT32 formatting tools may not support larger volumes or every device/file-system combination.
+- Storage operations are destructive; disconnects, faulty media and controller-specific behaviour can still cause errors.
 
 ## Completion sound
 
-In the main window, tick **Play sound when batch finishes** to enable the completion sound, or untick it to disable it. Click **Test Sound** to play it immediately, even if automatic playback is off. Your choice is saved automatically.
+Use **Play sound when batch finishes** to enable or disable the notification. Click **Test Sound** to check playback. Your preference is saved.
 
+The public source repository does not include the privately supplied completion audio. Redistribution of an embedded sound requires the appropriate rights. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
+## Build from source
 
-The private local build package can include a WAV converted from the audio file supplied by the project owner (`Assets/CompletionChime.wav`). The application embeds it using an MSBuild `EmbeddedResource` with the resource name `MultiMatter.CompletionChime.wav`. It plays on completion of the entire formatting batch and can be tested using **Test Sound** without formatting anything. The **Play sound when batch finishes** checkbox persists its setting to `%LOCALAPPDATA%\\Multi-Matter\\preferences.txt`; the test button works regardless of this preference.
+Install a compatible .NET SDK (the project targets .NET 8), then run in the repository root:
 
-If the WAV is absent, the application still builds and uses the standard Windows notification sound. **The WAV is deliberately gitignored** and must not be uploaded to a public GitHub repository or distributed as part of a public EXE until rights are confirmed. The file name suggests an audio production-library track; possession, editing, or a general music subscription does not automatically grant software redistribution rights. Verify the recording's origin and its licensing before publishing it. See [THIRD\_PARTY\_NOTICES.md](THIRD_PARTY_NOTICES.md).
+```powershell
+dotnet publish USBFormatter.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -o dist
+```
 
-To prepare public builds, remove `Assets/CompletionChime.wav` **before** building or committing; use a properly licensed sound if one is required for distribution.
+The self-contained build is produced at `dist\MultiMatter.exe`. A Windows installer can be built using the included `Build-Installer.cmd` and Inno Setup project; see [installer instructions](INSTALLER_README.md).
 
-## Logs and diagnostics
+## Support and security
 
-* `%LOCALAPPDATA%\\Multi-Matter\\drive-detection.log`
-* `%LOCALAPPDATA%\\Multi-Matter\\startup-error.log`
+- [Report an issue](https://github.com/audiophyleproductions/Multi-Matter/issues) — remove sensitive disk identifiers from logs before sharing.
+- [Security policy](SECURITY.md)
+- [Changelog](CHANGELOG.md)
+- [Third-party notices](THIRD_PARTY_NOTICES.md)
 
-When reporting a bug, review diagnostics before publishing them; they can contain disk identifiers.
+## Licence
 
-## Contributing and releasing
+**Copyright © 2026 Patrick Tiley. All rights reserved.**
 
-* See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [CHANGELOG.md](CHANGELOG.md) and [RELEASE\_CHECKLIST.md](RELEASE_CHECKLIST.md).
-* The project uses the [MIT License](LICENSE) for **application code**. Bundled assets retain any applicable separate rights; the Sonilo audio is **not bundled**.
-* Publisher and copyright metadata: **Patrick Tiley**.
-* `.github/workflows/build.yml` provides a downloadable Windows build artifact. Do not call a CI artifact a verified release until hardware tests pass.
+Multi-Matter is **source-available**, not OSI-approved open-source software. The [Multi-Matter Software Licence V1.0](LICENSE) permits personal, educational and authorised commercial use, subject to its conditions. Reselling the software, charging for access, unauthorised redistribution, advertising-monetised derivatives and reuse of protected source or branding require separate written permission.
 
-## Known limitations
-
-* FAT32 formatting of volumes above approximately 32 GiB is normally unsupported by the Windows formatting backend.
-* USB devices may be reported differently by some storage controllers; only devices confirmed to be USB are listed.
-* Supports Windows x64 only. Not digitally signed. Windows SmartScreen may warn about unrecognised binaries.
-* Drive-operation tests on other Windows systems, file-system combinations and unexpected device removal are pending.
-
-
-
-### Licence
-
-
-
-Copyright © 2026 Patrick Tiley. All rights reserved.
-
-
-
-Multi-Matter is free for personal, educational and internal commercial use under the \*\*Multi-Matter Software Licence V1.0\*\*.
-
-
-
-Resale, redistribution, advertising-supported modifications and unauthorised reuse of source code, branding or other protected assets require prior written permission from the copyright holder.
-
-
-
-See \[LICENSE] for the complete terms.
-
-
-
-\*\*Multi-Matter is source-available software, not open-source software under the OSI definition.\*\*
-
+**Free to use. Not free to exploit.**

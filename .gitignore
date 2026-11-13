@@ -10,3 +10,6 @@ dist/
 
 # Local-only audio, do not publish without proven redistribution rights
 Assets/CompletionChime.wav
+
+# Built Windows installers
+Multi-Matter_Setup_*.exe
