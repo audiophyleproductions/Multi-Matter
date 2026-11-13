@@ -1,21 +1,154 @@
-MIT License
+# MULTI-MATTER SOFTWARE LICENCE
+**Version 1.0 — Personal and Commercial Use Permitted; Redistribution and Monetisation Restricted**
 
-Copyright (c) 2026 Patrick Tiley
+Copyright © 2026 Patrick Tiley. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## 1. Definitions
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+"Software" means Multi-Matter — Removable Drive Batch Formatter, including its source code, executable files, documentation, user interface, designs, graphics, logos, icons, branding, audiovisual assets, updates and associated copyright-protected materials owned by the Licensor.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+"Licensor" means Patrick Tiley, the copyright holder.
+
+"User" means any individual or legal entity obtaining or using the Software.
+
+"Written Authorisation" means express permission granted by the Licensor in a separate written agreement identifying the authorised activities.
+
+## 2. Limited Licence Grant
+
+Subject to compliance with this Licence, the Licensor grants each User a worldwide, non-exclusive, royalty-free, non-transferable licence to:
+
+a. Download, install and execute the Software for personal, educational, organisational or internal commercial purposes.
+
+b. Use the Software to format removable storage devices, including in connection with paid professional or business services.
+
+c. Make reasonable backup copies solely for the User's own authorised use.
+
+d. Inspect publicly available source code for educational, security-review and evaluation purposes, without acquiring rights to exploit or redistribute that code.
+
+No separate written agreement is required for these expressly permitted activities.
+
+All rights not expressly granted are reserved by the Licensor.
+
+## 3. Prohibited Commercial Exploitation
+
+Without prior Written Authorisation from the Licensor, Users must not:
+
+a. Sell, rent, lease, sublicense or otherwise commercially distribute the Software or any substantial part of it.
+
+b. Charge any fee for downloading, installing, accessing or using the Software, including through subscriptions, licensing fees, paywalls or bundled software charges.
+
+c. Operate a paid service that provides customers with remote or hosted access to the Software itself.
+
+d. Incorporate the Software into a paid software product, commercial application package or monetised software distribution.
+
+e. Modify, package, embed or distribute the Software for the purpose of generating advertising, sponsorship, affiliate, referral or similar revenue.
+
+f. Represent themselves as the owner, publisher or authorised commercial distributor of the Software.
+
+These restrictions do not prohibit a User from earning income through otherwise lawful services performed using an unmodified, authorised installation of the Software.
+
+## 4. Source Code and Modifications
+
+The publication or availability of source code does not constitute permission to reuse it outside the limited rights granted by this Licence.
+
+Without Written Authorisation, Users must not:
+
+a. Reproduce source code for incorporation into another software project.
+
+b. Modify, adapt, translate, rebrand or create derivative software for redistribution or exploitation.
+
+c. Publish or distribute modified versions, forks or independently compiled derivatives.
+
+d. Remove or misrepresent copyright, licence or ownership notices.
+
+e. Extract and commercially exploit individual components, algorithms as expressed in protected code, interface designs or other copyright-protected elements.
+
+Nothing in this clause restricts conduct expressly permitted by applicable law that cannot lawfully be excluded by contract.
+
+## 5. Redistribution
+
+Users must not redistribute the Software, whether modified or unmodified, for payment or free of charge, except:
+
+a. Where expressly authorised in writing by the Licensor;
+
+b. For reasonable internal deployment within the same organisation for authorised use; or
+
+c. Where otherwise permitted by mandatory applicable law.
+
+Users may freely share links to the Licensor's official distribution channels.
+
+## 6. Intellectual Property and Branding
+
+The Licensor retains all copyright and other intellectual-property rights that the Licensor owns in the Software.
+
+No licence is granted to use Multi-Matter's name, logos, icons, visual identity or other distinctive branding in third-party products, advertising, endorsements or commercial distributions.
+
+Any use requiring permission under this Licence must receive Written Authorisation before that use occurs.
+
+This Licence does not claim ownership of third-party materials, independently developed ideas, unprotected functionality or material belonging to other copyright holders.
+
+Third-party components remain subject to their respective licences.
+
+## 7. Attribution and Ownership Notices
+
+Users must not remove, alter, obscure or misrepresent existing copyright notices or ownership information.
+
+Permission to use the Software does not imply sponsorship, endorsement, partnership or affiliation with the Licensor.
+
+## 8. Separate Commercial Licensing
+
+The Licensor may grant additional permissions through a separately negotiated written agreement.
+
+Such agreements may authorise resale, redistribution, modification, sublicensing, integration, commercial hosting, advertising-supported versions or reuse of specified intellectual property.
+
+No such additional rights arise merely from access to the Software or its publicly available source code.
+
+## 9. Termination
+
+The rights granted under this Licence automatically terminate if the User materially breaches its conditions, subject to any mandatory legal requirements.
+
+Upon termination, the User must cease unauthorised use and distribution and delete copies to the extent required by applicable law.
+
+Termination does not extinguish rights or remedies accrued before termination.
+
+## 10. Disclaimer of Warranties
+
+To the maximum extent permitted by applicable law, the Software is provided "as is" and "as available", without warranties of any kind, whether express or implied.
+
+The Licensor does not warrant that the Software will operate without interruption, error or data loss.
+
+The User is responsible for verifying storage-device selection and maintaining backups before formatting.
+
+Nothing in this Licence excludes, restricts or modifies any guarantee, right or remedy under the Australian Consumer Law or other applicable law where doing so would be unlawful.
+
+## 11. Limitation of Liability
+
+To the maximum extent permitted by applicable law, the Licensor is not liable for indirect or consequential loss arising from the use or inability to use the Software.
+
+Nothing in this clause excludes liability that cannot lawfully be excluded, including liability under mandatory consumer protection laws.
+
+## 12. Governing Law
+
+This Licence is governed by the laws of Queensland, Australia, and applicable laws of the Commonwealth of Australia.
+
+Subject to any mandatory jurisdictional protections, disputes arising under this Licence are submitted to the courts of competent jurisdiction in Queensland, Australia.
+
+## 13. Severability
+
+If any provision of this Licence is found invalid or unenforceable, the remaining provisions continue to operate to the extent permitted by law.
+
+## 14. Entire Licence
+
+This document constitutes the standard licence governing distributions expressly made available under it.
+
+Any additional permission must be recorded in a separate written agreement from the Licensor.
+
+Previous versions of the Software distributed under other licences remain subject to any rights validly granted under those licences.
+
+---
+
+**Copyright © 2026 Patrick Tiley. All rights reserved.**
+
+**Multi-Matter — Removable Drive Batch Formatter**
+
+*Free to use. Not free to exploit.*
