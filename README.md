@@ -74,3 +74,15 @@ When reporting a bug, review diagnostics before publishing them; they can contai
 - USB devices may be reported differently by some storage controllers; only devices confirmed to be USB are listed.
 - Supports Windows x64 only. Not digitally signed. Windows SmartScreen may warn about unrecognised binaries.
 - Drive-operation tests on other Windows systems, file-system combinations and unexpected device removal are pending.
+
+## Licence
+
+Copyright © 2026 Patrick Tiley. All rights reserved.
+
+Multi-Matter is free for personal, educational and internal commercial use under the **Multi-Matter Software Licence V1.0**.
+
+Resale, redistribution, advertising-supported modifications and unauthorised reuse of source code, branding or other protected assets require prior written permission from the copyright holder.
+
+See [LICENSE](LICENSE) for the complete terms.
+
+**Multi-Matter is source-available software, not open-source software under the OSI definition.**
