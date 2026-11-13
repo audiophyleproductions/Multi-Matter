@@ -1,0 +1,1 @@
+Completion sound fix: results MessageBox has no icon to avoid triggering a separate Windows system notification sound. Custom completion WAV remains unchanged.

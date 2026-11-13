@@ -1,0 +1,1 @@
+RC4: Eligibility is Windows Win32_LogicalDisk DriveType=2 (Removable), regardless of bus type. Still rejects boot/system/hidden/read-only/offline disks and special partitions, and revalidates at format time. USB HDD/SSD with DriveType=3 intentionally excluded. First verify detection and format a spare card only.

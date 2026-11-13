@@ -1,0 +1,8 @@
+Multi-Matter - Removable Drive Batch Formatter V1.0.1
+Copyright (c) 2026 Patrick Tiley
+
+Main window title, About dialog, footer, product metadata and license updated.
+Executable remains MultiMatter.exe to preserve user workflows.
+Completion sound toggle and Test Sound remain unchanged; About dialog describes their use only.
+Existing removable-media detection and formatting code unchanged.
+Please compile and test on Windows.

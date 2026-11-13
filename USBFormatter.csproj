@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MultiMatter</AssemblyName>
+    <RootNamespace>USBFormatter</RootNamespace>
+    <Version>1.0.1</Version>
+    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Product>Multi-Matter - Removable Drive Batch Formatter</Product>
+    <Title>Multi-Matter - Removable Drive Batch Formatter V1.0.1</Title>
+    <Description>Removable Drive Batch Formatter for Windows</Description>
+    <Company>Patrick Tiley</Company>
+    <Authors>Patrick Tiley</Authors>
+    <Copyright>Copyright © 2026 Patrick Tiley</Copyright>
+    <ApplicationIcon>Assets\MultiMatter.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Assets\MultiMatter.ico" />
+    <EmbeddedResource Include="Assets\CompletionChime.wav" Condition="Exists('Assets\CompletionChime.wav')" LogicalName="MultiMatter.CompletionChime.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+</Project>
